@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Intro Component */
+
+.intro-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./bg-img/blob-1.svg"), url("./bg-img/blob-2.svg");
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.intro-title {
+    color: #293264;
+    font-family: Karla;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.intro--description {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #293264;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.intro--btn {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin-top: 1.8rem;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 1rem;
+    border: 0.5px solid;
+    background-color: #4D5B9E;
+}
+
+/* Question Component  */
+
+.question-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-image: url("./bg-img/blob-1.svg"), url("./bg-img/blob-2.svg");
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
+}
+
+.question-card {
+    margin-bottom: 1rem;
+    min-height: 25rem;
+    max-width: 40em;
+}
+
+.question {
+    border-bottom: 1px solid #DBDEF0;
+    margin-bottom: 0.6rem;
+}
+
+.question--title {
+    font-family: Karla;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2rem;
+    color: #293264;
+}
+
+.question--answers {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+.question--answers > button{
+    padding: 0.3rem;
+    font-family: Inter;
+    font-size: 0.65rem;
+    font-weight: 500;
+    line-height: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    color:#293264;
+    border: 1px solid #4D5B9E;
+}
+
+.quiz-btn-selected{
+    background: #D6DBF5;
+}
+
+.quiz-btn-correct {
+    background: #94D7A2;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: none
+}
+
+.quiz-btn-incorrect{
+    background: #F8BCBC;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: none
+}
+
+.quiz-btn-disable {
+    cursor: not-allowed;
+    pointer-events: none;
+    border: none
+}
+
+.btn-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-check > p {
+    font-family: Inter;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #293264;
+    margin-right: 1rem;
+}
+
+.btn-check > button {
+    height: 2rem;
+    width: 8rem;
+    border-radius: 10px;
+    background: #4D5B9E;
+    border: none;
+    font-family: Inter;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #F5F7FB
 }
